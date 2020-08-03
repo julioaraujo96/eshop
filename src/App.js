@@ -1,13 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Helmet} from 'react-helmet'
+import LeftSideBar from './comps/LeftSidebar'
 
-function App() {
-  return (
-    <div className="App">
-        New Project
-    </div>
-  );
-}
+
+const App =()=>(
+  <div className="App">
+      <Helmet>
+          <meta charSet='utf-8' />
+          <title>Welcome to eShoes!</title>
+        </Helmet>
+    <LeftSideBar/>
+  </div>
+);
 
 export default App;
