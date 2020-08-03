@@ -1,6 +1,6 @@
 import React from 'react';
 import {Helmet} from 'react-helmet'
-import LeftSideBar from './comps/LeftSidebar'
+import LeftSideBar from './comps/LeftSideBar/LeftSidebar'
 
 
 const App =()=>(
