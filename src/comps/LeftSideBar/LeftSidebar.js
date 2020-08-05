@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../LeftSideBar/LeftSideBar.module.scss';
+import styles from './LeftSideBar.module.scss';
 import Logo from '../../assets/img/shoes.png';
 import menuSVG from '../../assets/img//open-menu.svg'
 
