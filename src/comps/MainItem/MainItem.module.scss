@@ -1,0 +1,15 @@
+.MainItem{
+    background-color: #77C6F6;
+    width: 44%;
+    display: flex;
+    font-size: 2rem;
+    strong{
+        font-size: 1rem;
+    }
+    img{
+        width: 50rem;
+        transform: rotate(-45deg);
+        align-self: center;
+        justify-self: center;
+    }
+}
