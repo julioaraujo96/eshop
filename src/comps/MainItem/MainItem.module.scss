@@ -1,15 +1,37 @@
 .MainItem{
     background-color: #77C6F6;
-    width: 44%;
+    width:45%;
     display: flex;
+    flex-direction: column;
     font-size: 2rem;
     strong{
         font-size: 1rem;
+        align-self: flex-end;
     }
     img{
         width: 50rem;
         transform: rotate(-45deg);
-        align-self: center;
-        justify-self: center;
+    }
+
+    h2{
+        text-align: right;
+        margin:5rem 5rem 0 0;
     }
 }
+
+.priceCircle{
+    background-color: #5089adb2;
+    border-radius: 50%;;
+    width: 80px;
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    margin:10% 0 0 5%;
+
+    h1{
+        font-size: 2rem;
+        color: #F4F4F5;
+        align-self: center;
+    }
+}
+

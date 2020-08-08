@@ -4,14 +4,15 @@ import AirPresto from '../../assets/img/Collection/AirPresto.png';
 
 const MainItem =() =>(
     <div className={styles.MainItem}>
-        <p>$99</p>
+        <div className={styles.priceCircle}>
+            <h1>$99</h1>
+        </div>
         <img src={AirPresto} alt='Nike Air Presto'/>
-        <p>
-            Summer 2020 <br></br> 
-            <strong>
+        <h2>
+            <span>Summer 2020</span> <br></br> 
+           
                 Nike Air Presto
-            </strong>
-        </p>
+        </h2>
     </div>
 );
 
