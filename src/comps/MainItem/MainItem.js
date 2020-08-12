@@ -2,16 +2,16 @@ import React from 'react';
 import styles from './MainItem.module.scss'
 import AirPresto from '../../assets/img/Collection/AirPresto.png';
 
-const MainItem =() =>(
+const MainItem = props =>(
     <div className={styles.MainItem}>
         <div className={styles.priceCircle}>
-            <h1>$99</h1>
+            <h1>${props.price}</h1>
         </div>
-        <img src={AirPresto} alt='Nike Air Presto'/>
+        <img src={props.url} alt={props.name}/>
         <h2>
-            <span>Summer 2020</span> <br></br> 
+            <span>{props.season}</span> <br></br> 
            
-                Nike Air Presto
+                {props.name}
         </h2>
     </div>
 );
