@@ -5,6 +5,7 @@ import MainItem from '../comps/MainItem/MainItem';
 import Collection from '../comps/Collection/Collection';
 import db from '../firebase';
 import styles from './App.module.scss';
+import RightSidebar from '../comps/RightSidebar/RightSidebar';
 
 
 const App =()=>{
@@ -17,8 +18,11 @@ useEffect(()=>{
 },[]);
 
 let mainItem = null;
+let collectionOutput = null;
+console.log(collection)
   if (collection.length > 0) {
     const mainShoe = collection.filter(c => c.mainItem === true);
+    const collectionData = collection.filter(c => c.mainItem === false);
     mainItem =(
       <MainItem 
         name={mainShoe[0].name} 
@@ -27,6 +31,8 @@ let mainItem = null;
         url={mainShoe[0].url}
       />
     );
+
+    collectionOutput =(<Collection data={collectionData}/>);
   }
   return(
     <div className={styles.App}>
@@ -36,7 +42,8 @@ let mainItem = null;
           </Helmet>
       <LeftSideBar/>
       {mainItem}
-      <Collection/> 
+      {collectionOutput}
+      <RightSidebar/>
     </div>
 )};
 
