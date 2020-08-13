@@ -1,6 +1,35 @@
 .ItemContainer{
+    display: flex;
     width: 50%;
     height: 33vh;
     border: 1px black solid;
-    background-color:#CD9FBC;
+    background-color:#9b59b6;
+    color: #F4F4F5;
+    flex-direction: column;
+
+    img{
+        width: 20rem;
+        margin: auto;
+    }
+
+    h2{
+        text-align: center;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+    }
+}
+
+.priceCircle{
+    background-color:rgba($color: #000000, $alpha: 0.4);
+    border-radius: 50%;
+    width: 40px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    margin:5% 0 0 5%;
+
+    h1{
+        font-size: 1.2rem;
+        align-self: center;
+    }
 }

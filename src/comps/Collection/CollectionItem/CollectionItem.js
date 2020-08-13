@@ -1,9 +1,13 @@
 import React from 'react';
 import styles from './CollectionItem.module.scss';
 
-const CollectionItem =()=>(
+const CollectionItem = props =>(
     <div className={styles.ItemContainer}>
-        <p>works</p>
+        <div className={styles.priceCircle}>
+            <h1>${props.price}</h1>
+        </div>
+        <img src={props.url} alt={props.name}/>
+        <h2>{props.name}</h2>
     </div>
 );
 
