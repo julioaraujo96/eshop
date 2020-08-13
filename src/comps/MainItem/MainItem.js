@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './MainItem.module.scss'
-import AirPresto from '../../assets/img/Collection/AirPresto.png';
 
 const MainItem = props =>(
     <div className={styles.MainItem}>

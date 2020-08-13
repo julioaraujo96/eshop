@@ -1,9 +1,10 @@
 .MainItem{
-    background-color: #77C6F6;
+    background-color: #3498db;
     width:45%;
     display: flex;
     flex-direction: column;
     font-size: 2rem;
+    padding-top:2.5%;
     strong{
         font-size: 1rem;
         align-self: flex-end;
@@ -20,7 +21,7 @@
 }
 
 .priceCircle{
-    background-color: #5089adb2;
+    background-color: rgba($color: #000000, $alpha: 0.4);;
     border-radius: 50%;;
     width: 80px;
     display: flex;
