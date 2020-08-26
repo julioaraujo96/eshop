@@ -7,10 +7,10 @@ import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 const RightSidebar =()=> (
     <div className={styles.RightSidebar}>
         <IconButton>
-            <SettingsIcon fontSize="large"/>
+            <SettingsIcon fontSize="large" className={styles.icons}/>
         </IconButton>
         <IconButton>
-            <ShoppingCartOutlinedIcon fontSize="large"/>
+            <ShoppingCartOutlinedIcon fontSize="large" className={styles.icons}/>
         </IconButton>
         <h2>Cart is empty</h2>
     </div>
