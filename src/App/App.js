@@ -3,9 +3,11 @@ import {Helmet} from 'react-helmet';
 import LeftSideBar from '../comps/LeftSideBar/LeftSidebar';
 import MainItem from '../comps/MainItem/MainItem';
 import Collection from '../comps/Collection/Collection';
+import RightSidebar from '../comps/RightSidebar/RightSidebar';
+import Pagination from '../comps/Pagination/Pagination'
 import db from '../firebase';
 import styles from './App.module.scss';
-import RightSidebar from '../comps/RightSidebar/RightSidebar';
+
 
 
 const App =()=>{
@@ -42,7 +44,10 @@ console.log(collection)
           </Helmet>
       <LeftSideBar/>
       {mainItem}
-      {collectionOutput}
+      <div>
+        {collectionOutput}
+        <Pagination/>
+      </div>
       <RightSidebar/>
     </div>
 )};
