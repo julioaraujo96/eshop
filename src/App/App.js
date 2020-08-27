@@ -3,6 +3,7 @@ import {Helmet} from 'react-helmet';
 import LeftSideBar from '../comps/LeftSideBar/LeftSidebar';
 import MainItem from '../comps/MainItem/MainItem';
 import Collection from '../comps/Collection/Collection';
+import CollectionSort from '../comps/CollectionSort/CollectionSort'
 import RightSidebar from '../comps/RightSidebar/RightSidebar';
 import Pagination from '../comps/Pagination/Pagination'
 import db from '../firebase';
@@ -46,7 +47,10 @@ console.log(collection)
       {mainItem}
       <div>
         {collectionOutput}
-        <Pagination/>
+        <div className={styles.flexComp}>
+          <Pagination/>
+          <CollectionSort/>
+        </div>
       </div>
       <RightSidebar/>
     </div>
