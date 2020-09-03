@@ -1,4 +1,17 @@
 .CollectionSort{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #d8d8db;
-    width:50%
+    font-size: 2rem;
+    width:50%;
+
+    h1{
+        padding:1.5rem
+    }
+
+    h1:hover{
+        border-bottom: 2px solid #9797a0;
+        color: #9797a0;
+    }
 }
