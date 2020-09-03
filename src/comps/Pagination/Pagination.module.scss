@@ -1,5 +1,40 @@
 .Pagination{
+    display: flex;
     background-color: #F4F4F5;
     height: 34vh;
     width: 50%;
+    justify-content: space-around;
+    align-items: center;
 }
+.centerContainer{
+    display: flex;
+    font-size: 6rem;
+    color: #737375;
+    flex-direction: column;
+    .divider{
+        border-bottom: 2px solid #c7c7ca;
+        transform: skew(0deg,-45deg);   
+        height: 1rem;
+        width: 3rem;
+    }
+
+    h1{
+        margin-left: 2rem;
+    }
+
+    h2{
+        margin-right: 2rem;
+    }
+}
+
+.icons{
+    color:#a7a7ac;
+    &:hover{
+        color:black
+    }
+}
+
+.rotate{
+    transform:rotate(180deg);
+}
+
