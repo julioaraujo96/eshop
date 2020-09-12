@@ -4,12 +4,13 @@
     background-color:#F4F4F5;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
     min-width:5%;
     justify-content: space-between;
-    padding-top:1.4rem;
+    padding: 1.5rem;
 
     .logo{
-        width:4.5rem; 
+        width:4rem; 
         transform: rotate(25deg);
     }
     
@@ -17,11 +18,45 @@
         width: 2.5rem;
     }
 
-    p{
-        font-weight: bold;
-        font-size: 1rem;
-        transform: rotate(-90deg);
-        margin-bottom: 4rem;
+   
+}
+
+.socialsContainer{
+    cursor: pointer;
+    position: relative;
+    
+    .textHide{
+    
+        p{
+            bottom:0;
+            width: 100%;
+            position: absolute;
+            transition: bottom 0.5s;
+            transform: rotate(-90deg);
+            font-weight: bold;
+            font-size: 1rem;
+        } 
     }
 }
 
+.socialIcons{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom:-200px;
+    transition: bottom 0.5s;
+}
+.icons{
+    margin-bottom: 0.5rem;
+    &:hover{
+        opacity: 0.5;
+    }
+}
+
+.socialsContainer:hover p{
+    bottom:-100px;
+}
+
+.socialsContainer:hover .socialIcons{
+    bottom: 0;
+}
