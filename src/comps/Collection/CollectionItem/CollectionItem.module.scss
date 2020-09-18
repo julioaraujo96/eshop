@@ -1,35 +1,66 @@
+@mixin flex-all {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .ItemContainer{
-    display: flex;
+	@include flex-all;
+    position: relative;
     width: 50%;
     height: 33vh;
     border: 1px black solid;
     background-color:#9b59b6;
     color: #F4F4F5;
     flex-direction: column;
+    font-size: 2rem;
 
-    img{
-        width: 20rem;
-        margin: auto;
+    &:hover{
+      cursor: pointer;
+      background-color: #26de81;
     }
-
-    h2{
-        text-align: center;
-        padding-bottom: 1rem;
-        font-size: 1rem;
+    &:hover > .priceCircle {
+      transform: scale(1);
+    }
+    &:hover > .imageContainer {
+        transform: translatey(-20px);
+    }
+    &:hover > .title {
+      transform: translatey(-20px);
     }
 }
 
-.priceCircle{
-    background-color:rgba($color: #000000, $alpha: 0.4);
-    border-radius: 50%;
-    width: 40px;
-    display: flex;
-    height: 40px;
-    justify-content: center;
-    margin:5% 0 0 5%;
+.imageContainer{
+  max-width: 80%;
+  padding-bottom: 20px;
+  transition: transform 0.4s ease;
+  z-index: 3;
+  & > img{
+    width: 20rem;
+		object-fit: cover;
+  }
+}
 
-    h1{
-        font-size: 1.2rem;
-        align-self: center;
-    }
+.priceCircle{
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	background-color: #00000050;
+	color: #ffffff;
+	padding: 10px;
+	width: 40px;
+  height: 40px;
+	border-radius: 50%;
+	transform: scale(0);
+	transition: transform 0.4s cubic-bezier(0.45, 0.17, 0.74, 1.52);
+	z-index: 5;
+  @include flex-all;
+  h1{
+    font-size: 1.2rem;
+  }
+}
+
+.title{
+  font-size: 1rem;
+  transform: translatey(-50px);
+	transition: transform 0.4s ease;
 }
