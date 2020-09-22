@@ -5,7 +5,8 @@ import MainItem from '../comps/MainItem/MainItem';
 import Collection from '../comps/Collection/Collection';
 import CollectionSort from '../comps/CollectionSort/CollectionSort'
 import RightSidebar from '../comps/RightSidebar/RightSidebar';
-import Pagination from '../comps/Pagination/Pagination'
+import Pagination from '../comps/Pagination/Pagination';
+import Modal from '../comps/UI/Modal/Modal';
 import db from '../firebase';
 import styles from './App.module.scss';
 
@@ -43,6 +44,7 @@ console.log(collection)
             <meta charSet='utf-8' />
             <title>Welcome to eShoes!</title>
           </Helmet>
+        <Modal/>
       <LeftSideBar/>
       {mainItem}
       <div>
