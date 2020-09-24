@@ -11,6 +11,7 @@ const Collection = props =>(
                 season={item.season} 
                 price={item.price}
                 url={item.url}
+                clicked={item.handleClick}
             />
         ))}
     </div>
