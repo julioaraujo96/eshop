@@ -1,10 +1,16 @@
 import React from 'react';
 import styles from './Modal.module.scss';
 
-const Modal = props =>(
-    <div className={styles.Modal}>
-        {props.children}
-    </div>
-);
+const Modal = ({showModal,children,setShowModal}) =>{
+    return(
+        <div>
+             {showModal && (
+                <div className={styles.Modal}>
+                   { children}
+                </div>
+            )}
+        </div>
+    )
+}
 
 export default Modal;

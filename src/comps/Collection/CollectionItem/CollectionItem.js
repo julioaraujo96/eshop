@@ -2,9 +2,8 @@ import React from 'react';
 import styles from './CollectionItem.module.scss';
 
 const CollectionItem = props =>{
-    console.log(props.clicked);
 return(
-    <div className={styles.ItemContainer} onClick={props.clicked.handleClick(props)}>
+    <div className={styles.ItemContainer} onClick={()=>props.clicked.handleClick(props)}>
         <div className={styles.priceCircle}>
             <h1>${props.price}</h1>
         </div>

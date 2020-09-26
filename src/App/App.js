@@ -28,10 +28,11 @@ let mainItem = null;
 let collectionOutput = null;
 
 const [currentSummary,setCurrentSummary] = useState();
+const [showModal,setShowModal] = useState(false);
 
   const handleClick=(item) =>{
-    console.log(item)
-    // setShowModal(true) 
+    setCurrentSummary(item);
+    setShowModal(true) 
   }
 console.log(currentSummary)
   if (collection.length > 0) {
@@ -55,7 +56,9 @@ console.log(currentSummary)
             <meta charSet='utf-8' />
             <title>Welcome to eShoes!</title>
           </Helmet>
-        {/* <Modal/> */}
+         <Modal showModal={showModal} setShowModal={setShowModal}>
+            <ProductSummary {...currentSummary} setShowModal={setShowModal}/>
+         </Modal> 
       <LeftSideBar/>
       {mainItem}
       <div>
