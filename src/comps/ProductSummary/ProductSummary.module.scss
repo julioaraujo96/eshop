@@ -1,0 +1,65 @@
+.summaryHeader{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: rgb(92, 90, 90);
+}
+
+.shoeContainer{
+    display: flex;
+    flex-direction: column;
+    h1{
+        font-size:2rem;
+    }
+
+    img{
+        width: 300px;
+        padding-top: 2.5rem;
+        align-self: center;
+    }
+}
+
+.sizePicker{
+    margin-top: 1rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    .inputContainer{
+        input{
+            margin: 1rem 1rem 0 0.1rem;
+            align-self: center;
+            padding:1rem 3.5rem;
+            border-radius: 10px;
+            background-color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border:1px solid rgb(145, 143, 143); 
+            &:hover{
+                border-color: black;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+
+.purchaseContainer{
+    margin-top:2rem;
+
+    .addCartButton{
+        width: 100%;
+        padding: 10px 0;
+        background-color: #3498db;
+        color:white;
+        border-radius:10px;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+
+        &:hover{
+            opacity: 0.8;
+            cursor: pointer;
+        }
+    }
+}

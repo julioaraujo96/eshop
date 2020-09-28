@@ -57,7 +57,7 @@ console.log(currentSummary)
             <title>Welcome to eShoes!</title>
           </Helmet>
          <Modal showModal={showModal} setShowModal={setShowModal}>
-            {/* <ProductSummary {...currentSummary} setShowModal={setShowModal}/> */}
+            <ProductSummary {...currentSummary} setShowModal={setShowModal}/>
          </Modal> 
       <LeftSideBar/>
       {mainItem}

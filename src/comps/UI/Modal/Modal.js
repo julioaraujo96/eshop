@@ -1,5 +1,6 @@
 import React from 'react';
 import {motion,AnimatePresence} from 'framer-motion';
+import CancelIcon from '@material-ui/icons/Cancel';
 import styles from './Modal.module.scss';
 
 const backdrop ={
@@ -13,7 +14,7 @@ const modal ={
         opacity:0
     },
     visible:{
-        y:"200px",
+        y:"50px",
         opacity:1,
         transition:{delay:0.5}
     }
@@ -31,6 +32,7 @@ const Modal = ({showModal,children,setShowModal}) =>{
                 >
                     <motion.div className={styles.Modal}
                     variants={modal}>
+                        <CancelIcon className={styles.CancelIcon} onClick={()=>setShowModal(false)}/>
                         {children}
                     </motion.div>
                 </motion.div>
