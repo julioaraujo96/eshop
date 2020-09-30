@@ -8,8 +8,7 @@ const MainItem = props =>(
         </div>
         <img src={props.url} alt={props.name}/>
         <h2>
-            <span>{props.season}</span> <br></br> 
-           
+            <span>{props.season}</span> <br/> 
                 {props.name}
         </h2>
     </div>
