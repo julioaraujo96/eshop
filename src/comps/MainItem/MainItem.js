@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './MainItem.module.scss'
 
 const MainItem = props =>(
-    <div className={styles.MainItem} >
+    <div className={styles.MainItem} onClick={()=>props.clicked(props)} >
         <div className={styles.priceCircle}>
             <h1>${props.price}</h1>
         </div>

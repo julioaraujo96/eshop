@@ -45,6 +45,7 @@ console.log(currentSummary)
         season={mainShoe[0].season} 
         price={mainShoe[0].price}
         url={mainShoe[0].url}
+        clicked={handleClick}
       />
     );
     collectionOutput =(<Collection data={collectionData}/>);
