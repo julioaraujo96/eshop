@@ -10,6 +10,7 @@ import ProductSummary from '../comps/ProductSummary/ProductSummary';
 import Modal from '../comps/UI/Modal/Modal';
 import db from '../firebase';
 import styles from './App.module.scss';
+import SideMenu from '../comps/SideMenu/SideMenu';
 
 
 
@@ -29,11 +30,13 @@ let collectionOutput = null;
 
 const [currentSummary,setCurrentSummary] = useState();
 const [showModal,setShowModal] = useState(false);
+const [showMenu,setShowMenu] = useState(false);
 
   const handleClick=(item) =>{
     setCurrentSummary(item);
     setShowModal(true) 
   }
+
 console.log(currentSummary)
   if (collection.length > 0) {
     const mainShoe = collection.filter(c => c.mainItem === true);
@@ -57,10 +60,11 @@ console.log(currentSummary)
             <meta charSet='utf-8' />
             <title>Welcome to eShoes!</title>
           </Helmet>
+          <SideMenu showMenu={showMenu}/>
          <Modal showModal={showModal} setShowModal={setShowModal}>
             <ProductSummary {...currentSummary} setShowModal={setShowModal}/>
          </Modal> 
-      <LeftSideBar/>
+      <LeftSideBar setShowMenu={setShowMenu}/>
       {mainItem}
       <div>
         {collectionOutput}

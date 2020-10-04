@@ -9,13 +9,13 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 
-const LeftSidebar =()=> (
+const LeftSidebar =({setShowMenu})=> (
     <div className={styles.LeftSideBar}>
         <IconButton>
             <img src={Logo} alt='website logo' className={styles.logo}/>
         </IconButton>
-        <IconButton>
-            <img src={menuSVG} alt='menu' className={styles.menu}/>
+        <IconButton  onClick={()=>setShowMenu(true)}>
+            <img src={menuSVG} alt='menu' className={styles.menu} />
         </IconButton>
         <div>
             <div className={styles.socialsContainer}>
