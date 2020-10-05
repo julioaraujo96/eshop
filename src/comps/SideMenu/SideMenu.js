@@ -4,6 +4,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import CloseIcon from '@material-ui/icons/Close';
 import Logo from '../../assets/img/shoes.png';
 import Shoe from '../../assets/img/pegasus.png';
 import styles from './SideMenu.module.scss'
@@ -58,7 +59,7 @@ const socialIcons ={
     }
 }
 
-const SideMenu = ({showMenu}) => {
+const SideMenu = ({showMenu,setShowMenu}) => {
     return (
         <AnimatePresence exitBeforeEnter>
             {showMenu && (
@@ -76,6 +77,7 @@ const SideMenu = ({showMenu}) => {
                          className={styles.SideMenu}
                          >
                                 <img src={Logo} alt='website logo' className={styles.logo}/>
+                                <CloseIcon fontSize="large" className={styles.closeIcon} onClick={()=> setShowMenu(false)}/>
                              <motion.img 
                              src={Shoe} 
                              alt='Nike Pegasus Blue' 

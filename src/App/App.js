@@ -60,7 +60,7 @@ console.log(currentSummary)
             <meta charSet='utf-8' />
             <title>Welcome to eShoes!</title>
           </Helmet>
-          <SideMenu showMenu={showMenu}/>
+          <SideMenu showMenu={showMenu} setShowMenu={setShowMenu}/>
          <Modal showModal={showModal} setShowModal={setShowModal}>
             <ProductSummary {...currentSummary} setShowModal={setShowModal}/>
          </Modal> 

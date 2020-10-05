@@ -17,6 +17,11 @@
         font-size: 4rem;
         font-weight: 800;
         margin-bottom: 8rem;
+
+        li:hover{
+            color: rgb(129, 122, 122);
+            cursor: pointer;
+        }
     }
 
     .logo{
@@ -50,6 +55,16 @@
         }
     }
     
+    .closeIcon{
+        position: absolute;
+        top: 1rem;
+        left:1rem;
+        &:hover{
+            background-color: rgb(36, 147, 211);
+            color: #fff;
+            cursor: pointer;
+        }
+    }
 }
 
 .backdrop {
