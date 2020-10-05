@@ -1,11 +1,55 @@
 .SideMenu{
     position: absolute;
+    user-select: none;
     top: 0;
     left: 0;
     z-index: 6;
     height: 100vh;
     width:0;
+    overflow: hidden;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    ul{
+        list-style-type: none;
+        font-size: 4rem;
+        font-weight: 800;
+        margin-bottom: 8rem;
+    }
+
+    .logo{
+        width: 8rem; 
+        transform: rotate(25deg);
+        margin-bottom: 4rem;
+        margin-bottom:4rem;
+        margin-right:8rem;
+        opacity: 0.8;
+    }
+
+    .backgroundShoe{
+        position: absolute;
+        top:-80px;
+        transform: rotate(-25deg);
+        width: 30rem;
+    }
+
+    .socialIcons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .icons{
+        margin:0 1rem;
+        &:hover{
+            opacity: 0.5;
+            cursor: pointer;
+        }
+    }
+    
 }
 
 .backdrop {
