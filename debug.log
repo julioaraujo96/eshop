@@ -79,3 +79,9 @@
 [0917/003031.947:ERROR:crash_report_database_win.cc(430)] unexpected header
 [0917/003532.005:ERROR:crash_report_database_win.cc(430)] unexpected header
 [0917/005032.007:ERROR:crash_report_database_win.cc(430)] unexpected header
+[1010/154846.338:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não conseguiu localizar o caminho especificado. (0x3)
+[1012/164951.434:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não conseguiu localizar o caminho especificado. (0x3)
+[1014/142415.604:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não conseguiu localizar o caminho especificado. (0x3)
+[1014/220232.461:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não conseguiu localizar o caminho especificado. (0x3)
+[1015/140711.827:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não conseguiu localizar o caminho especificado. (0x3)
+[1015/152739.174:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não conseguiu localizar o caminho especificado. (0x3)

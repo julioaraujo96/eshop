@@ -2,8 +2,7 @@ import React from 'react';
 import styles from './ProductSummary.module.scss';
 
 
-const ProductSummary = (currentSummary,setShowModal) =>{
-    console.log(currentSummary);
+const ProductSummary = ({currentSummary,setShowModal,addTocart}) =>{
     return(
         <article>
             <div className={styles.summaryHeader}>
@@ -23,7 +22,7 @@ const ProductSummary = (currentSummary,setShowModal) =>{
                 </div>
             </div>
             <div className={styles.purchaseContainer}>
-                <button className={styles.addCartButton}>Add to cart</button>
+                <button className={styles.addCartButton} onClick={()=>addTocart(currentSummary)}>Add to cart</button>
             </div>
         </article>
     )

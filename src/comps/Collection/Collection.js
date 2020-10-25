@@ -6,7 +6,8 @@ const Collection = props =>(
     <div className={styles.Collection}>
         {props.data.map(item => (
             <CollectionItem
-                key={item.name}
+                key={item.id}
+                id={item.id}
                 name={item.name} 
                 season={item.season} 
                 price={item.price}
