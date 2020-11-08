@@ -8,6 +8,7 @@ import RightSidebar from '../comps/RightSidebar/RightSidebar';
 import Pagination from '../comps/Pagination/Pagination';
 import ProductSummary from '../comps/ProductSummary/ProductSummary';
 import Modal from '../comps/UI/Modal/Modal';
+import Cart from '../comps/UI/Cart/Cart';
 import db from '../firebase';
 import styles from './App.module.scss';
 import SideMenu from '../comps/SideMenu/SideMenu';
@@ -34,6 +35,7 @@ const [currentSummary,setCurrentSummary] = useState();
 const [cartSummary,setCartSummary] = useState([]);
 const [showModal,setShowModal] = useState(false);
 const [showMenu,setShowMenu] = useState(false);
+const [showCart,setShowCart] = useState(true);
 
   const handleClick=(item) =>{
     setCurrentSummary(item);
@@ -46,18 +48,21 @@ const handleCart =(item)=>{
     setCartSummary([item])
   }
 
-//if o item.id !== cart[i].id, add item to cart
+//se o array conter algum item
   
    if(cartSummary.length >= 0){
       let cart = [...cartSummary];
       let selectedItem = {...item};
+      //encontrar o index do array em que os ids são iguais
     const itemIndex = cart.findIndex(c => c.id === selectedItem.id)
     if(itemIndex === -1){
+      //se o index não existir, a quantidade desse item será 1, podemos add ao cart
       selectedItem.quantity = 1;
       cart.push(selectedItem)
       setCartSummary(cart);
     }
     else{
+      //se já existir um item, então podemos incrementar a quantidade e atualizar o state.
       cart[itemIndex].quantity++
       setCartSummary(cart)
     }
