@@ -68,7 +68,7 @@ const handleCart =(item)=>{
     }
    }
 }
-console.log(cartSummary);
+console.log(showCart);
 
   if (collection.length > 0) {
     const mainShoe = collection.filter(c => c.mainItem === true);
@@ -105,7 +105,7 @@ console.log(cartSummary);
           <CollectionSort/>
         </div>
       </div>
-      <RightSidebar/>
+      <RightSidebar showCart={showCart} setShowCart={setShowCart}/>
     </div>
 )};
 
