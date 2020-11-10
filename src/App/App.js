@@ -7,6 +7,7 @@ import CollectionSort from '../comps/CollectionSort/CollectionSort'
 import RightSidebar from '../comps/RightSidebar/RightSidebar';
 import Pagination from '../comps/Pagination/Pagination';
 import ProductSummary from '../comps/ProductSummary/ProductSummary';
+import Backdrop from '../comps/UI/Backdrop/Backdrop';
 import Modal from '../comps/UI/Modal/Modal';
 import Cart from '../comps/UI/Cart/Cart';
 import db from '../firebase';
@@ -106,6 +107,13 @@ console.log(showCart);
         </div>
       </div>
       <RightSidebar showCart={showCart} setShowCart={setShowCart}/>
+      {/* backdrop cart */}
+      {
+        showCart && 
+          <Backdrop showCart={showCart} setShowCart={setShowCart}>
+
+          </Backdrop>
+      }
     </div>
 )};
 

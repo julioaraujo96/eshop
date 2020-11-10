@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from '.../Backdrop.module.scss';
+import styles from './Backdrop.module.scss';
 
-const Backdrop = (props) => {
+const Backdrop = ({showCart,setShowCart,children}) => {
     return (
-        <div className={styles.Backdrop}>
-            {props.children}
+        <div className={styles.Backdrop} onClick={()=>{setShowCart(!showCart)}}>
+            {children}
         </div>
     );
 };
