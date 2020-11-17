@@ -7,7 +7,7 @@ import CollectionSort from '../comps/CollectionSort/CollectionSort'
 import RightSidebar from '../comps/RightSidebar/RightSidebar';
 import Pagination from '../comps/Pagination/Pagination';
 import ProductSummary from '../comps/ProductSummary/ProductSummary';
-import Backdrop from '../comps/UI/Backdrop/Backdrop';
+import CartBackdrop from '../comps/UI/CartBackdrop/CartBackdrop';
 import Modal from '../comps/UI/Modal/Modal';
 import Cart from '../comps/UI/Cart/Cart';
 import db from '../firebase';
@@ -36,7 +36,7 @@ const [currentSummary,setCurrentSummary] = useState();
 const [cartSummary,setCartSummary] = useState([]);
 const [showModal,setShowModal] = useState(false);
 const [showMenu,setShowMenu] = useState(false);
-const [showCart,setShowCart] = useState(true);
+const [showCart,setShowCart] = useState(false);
 
   const handleClick=(item) =>{
     setCurrentSummary(item);
@@ -69,7 +69,7 @@ const handleCart =(item)=>{
     }
    }
 }
-console.log(showCart);
+console.log(cartSummary);
 
   if (collection.length > 0) {
     const mainShoe = collection.filter(c => c.mainItem === true);
@@ -84,7 +84,7 @@ console.log(showCart);
         clicked={handleClick}
       />
     );
-    collectionOutput =(<Collection data={collectionData}/>);
+    collectionOutput =(<Collection data={collectionData} showModal={showModal} setShowModal={setShowModal}/>);
   }
   
   return(
@@ -108,12 +108,12 @@ console.log(showCart);
       </div>
       <RightSidebar showCart={showCart} setShowCart={setShowCart}/>
       {/* backdrop cart */}
-      {
-        showCart && 
-          <Backdrop showCart={showCart} setShowCart={setShowCart}>
-
-          </Backdrop>
-      }
+        {
+          showCart && 
+            <CartBackdrop showCart={showCart} setShowCart={setShowCart}>
+                <Cart cart={cartSummary}/>
+            </CartBackdrop>
+        }
     </div>
 )};
 
