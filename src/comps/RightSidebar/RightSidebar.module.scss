@@ -1,5 +1,7 @@
 .RightSidebar{
     display: flex;
+    position: relative;
+    z-index: 99;
     flex-direction: column;
     background-color:#F4F4F5;
     align-items: center;
