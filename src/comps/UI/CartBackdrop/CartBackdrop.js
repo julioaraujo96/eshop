@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Backdrop.module.scss';
+import styles from './CartBackdrop.module.scss';
 
 const Backdrop = ({showCart,setShowCart,children}) => {
     return (
