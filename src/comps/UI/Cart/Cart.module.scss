@@ -1,8 +1,13 @@
 .Cart{
-    max-width: 500px;
+    position: absolute;
+    z-index: 5;
+    max-width: 46%;
+    height: 65%;
+    width: 100%;
+    margin-right: 5.5%;
     // position: relative;
     // margin: 0 auto;
     padding: 40px 20px;
-    background: rgb(184, 181, 181);
+    background: #ffffff;;
     border-radius: 10px;
 }
