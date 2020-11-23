@@ -67,9 +67,9 @@ const handleCart =(item)=>{
       cart[itemIndex].quantity++
       setCartSummary(cart)
     }
+    setShowModal(false);
    }
 }
-console.log(cartSummary);
 
   if (collection.length > 0) {
     const mainShoe = collection.filter(c => c.mainItem === true);
