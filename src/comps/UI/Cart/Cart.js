@@ -6,7 +6,6 @@ const Cart = (props) => {
     let cartItems = null;
     let checkoutButton =null;
     if(props.cart.length > 0){
-        console.log('hello')
          cartItems = (props.cart.map(item => (
             <CartItem key={item.id}item={item}/>
          )));
