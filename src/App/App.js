@@ -95,7 +95,7 @@ const handleCart =(item)=>{
             <title>Welcome to eShoes!</title>
           </Helmet>
           <SideMenu showMenu={showMenu} setShowMenu={setShowMenu}/>
-            <Topbar showCart={showCart} setShowCart={setShowCart}/>
+            <Topbar showCart={showCart} setShowCart={setShowCart} cart={cartSummary.length}/>
          <Modal showModal={showModal} setShowModal={setShowModal}>
             <ProductSummary currentSummary={currentSummary} setShowModal={setShowModal} addTocart={handleCart}/>
          </Modal> 
@@ -108,7 +108,7 @@ const handleCart =(item)=>{
           <CollectionSort/>
         </div>
       </div>
-      <RightSidebar showCart={showCart} setShowCart={setShowCart}/>
+      <RightSidebar showCart={showCart} setShowCart={setShowCart} cart={cartSummary.length}/>
       {/* backdrop cart */}
         {
           showCart && 
