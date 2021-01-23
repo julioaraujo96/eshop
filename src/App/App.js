@@ -5,6 +5,7 @@ import MainItem from '../comps/MainItem/MainItem';
 import Collection from '../comps/Collection/Collection';
 import CollectionSort from '../comps/CollectionSort/CollectionSort'
 import RightSidebar from '../comps/RightSidebar/RightSidebar';
+import Topbar from '../comps/Topbar/Topbar';
 import Pagination from '../comps/Pagination/Pagination';
 import ProductSummary from '../comps/ProductSummary/ProductSummary';
 import CartBackdrop from '../comps/UI/CartBackdrop/CartBackdrop';
@@ -94,6 +95,7 @@ const handleCart =(item)=>{
             <title>Welcome to eShoes!</title>
           </Helmet>
           <SideMenu showMenu={showMenu} setShowMenu={setShowMenu}/>
+            <Topbar showCart={showCart} setShowCart={setShowCart}/>
          <Modal showModal={showModal} setShowModal={setShowModal}>
             <ProductSummary currentSummary={currentSummary} setShowModal={setShowModal} addTocart={handleCart}/>
          </Modal> 

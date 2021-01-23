@@ -9,7 +9,7 @@
     // position: relative;
     // margin: 0 auto;
     padding: 40px 20px;
-    background: #ffffff;;
+    background: #ffffff;
     border-radius: 10px;
 
     button{
@@ -43,5 +43,11 @@
     p{
         color:rgb(23, 126, 243);
         font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .Cart{
+       max-width: 80%;
     }
 }
