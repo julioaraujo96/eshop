@@ -63,3 +63,20 @@
         }
     }
 }
+
+@media only screen and (max-width:450px){
+    .shoeContainer{
+        img{
+            width: 200px;
+            padding-top: 1.5rem;
+        }
+    }
+
+.sizePicker{
+    .inputContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+}

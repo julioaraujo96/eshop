@@ -28,5 +28,11 @@
 
   .CancelIcon:hover{
     color:#9b2323;
+  }
 
+  @media only screen and (max-width:450px){
+    .Modal{
+      max-width: 300px;
+      padding: 30px 15px;
+    }
   }
