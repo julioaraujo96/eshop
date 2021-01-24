@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './LeftSideBar.module.scss';
-import Logo from '../../assets/img/sneakers.svg';
+// import Logo from '../../assets/img/sneakers.svg';
 import menuSVG from '../../assets/img//open-menu.svg'
 import { IconButton } from '@material-ui/core';
 import {motion} from 'framer-motion';
